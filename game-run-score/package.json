@@ -1,0 +1,17 @@
+{
+  "name": "game-run-score",
+  "version": "1.0.0",
+  "description": "game-run-score",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "httpserver -p 3005",
+    "less": "lessc less/run.less > css/run.css"
+  },
+  "author": "kuqoi",
+  "license": "ISC",
+  "peerDependencies": {
+    "httpserver": "^0.2.0",
+    "less": "^2.7.2"
+  }
+}

@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #030d17 url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+}
+.re-container {
+  height: 100%;
+  position: relative;
+  padding-top: 1.333333rem;
+}
+.re-timing {
+  background: url(../img/number-t.png) no-repeat;
+  background-size: cover;
+  display: block;
+  float: left;
+  width: 0.24rem;
+  height: 0.346667rem;
+}
+.re-timing_0 {
+  background-position: 0 0;
+}
+.re-timing_1 {
+  background-position: -0.24rem 0;
+}
+.re-timing_2 {
+  background-position: -0.48rem 0;
+}
+.re-timing_3 {
+  background-position: -0.72rem 0;
+}
+.re-timing_4 {
+  background-position: -0.96rem 0;
+}
+.re-timing_5 {
+  background-position: -1.2rem 0;
+}
+.re-timing_6 {
+  background-position: -1.44rem 0;
+}
+.re-timing_7 {
+  background-position: -1.68rem 0;
+}
+.re-timing_8 {
+  background-position: -1.92rem 0;
+}
+.re-timing_9 {
+  background-position: -2.16rem 0;
+}
+.re-timing_s {
+  background-position: -2.4rem 0;
+}
+.re-number {
+  background: url(../img/number.png) no-repeat;
+  background-size: cover;
+  display: block;
+  float: left;
+  width: 0.466667rem;
+  height: 0.68rem;
+}
+.re-number_0 {
+  background-position: 0 0;
+}
+.re-number_1 {
+  background-position: -0.466667rem 0;
+}
+.re-number_2 {
+  background-position: -0.933333rem 0;
+}
+.re-number_3 {
+  background-position: -1.4rem 0;
+}
+.re-number_4 {
+  background-position: -1.866667rem 0;
+}
+.re-number_5 {
+  background-position: -2.333333rem 0;
+}
+.re-number_6 {
+  background-position: -2.8rem 0;
+}
+.re-number_7 {
+  background-position: -3.266667rem 0;
+}
+.re-number_8 {
+  background-position: -3.733333rem 0;
+}
+.re-number_9 {
+  background-position: -4.2rem 0;
+}
+.re-number_s {
+  background-position: -4.666667rem 0;
+}
+.re-countdown {
+  display: none;
+  position: absolute;
+  top: 1.333333rem;
+  background: url(../img/countdown.png) no-repeat 0 0;
+  background-size: cover;
+  width: 4.626667rem;
+  height: 4.64rem;
+  left: 50%;
+  margin-left: -2.313333rem;
+}
+.re-energy {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8.4rem;
+  height: 4.373333rem;
+  background: url(../img/energy-bg.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  color: #fff;
+}
+.re-energy_timing {
+  position: absolute;
+  left: 3.973333rem;
+  top: 1.92rem;
+  font-size: 0.346667rem;
+}
+.re-energy_timing .re-number {
+  width: 0.226667rem;
+  height: 0.346667rem;
+  margin-left: 0.026667rem;
+  margin-right: 0.026667rem;
+}
+.re-energy_mileage {
+  position: absolute;
+  left: 3.973333rem;
+  top: 2.853333rem;
+}
+.re-energy_mileage .re-number {
+  margin-left: 0.04rem;
+  margin-right: 0.04rem;
+}
+.re-moon {
+  background: url(../img/moon.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 5.653333rem;
+  position: absolute;
+  bottom: 0;
+}
+.re-moon_1 {
+  background-position: center -7.413333rem;
+}
+.re-start {
+  display: none;
+  background: url(../img/btn-start.png) no-repeat top center;
+  background-size: cover;
+  width: 7.706667rem;
+  height: 1.813333rem;
+  position: absolute;
+  top: 2.573333rem;
+  left: 50%;
+  margin-left: -3.853333rem;
+}
+.re-spaceman {
+  background: url(../img/spaceman.png) no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.933333rem;
+  width: 3.6rem;
+  height: 4.133333rem;
+  overflow: hidden;
+}
+.re-spaceman_left {
+  background-position: -3.6rem 0;
+}
+.re-spaceman_right {
+  background-position: -7.2rem 0;
+}
+.re-foot {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 1.733333rem;
+  height: 2.226667rem;
+}
+.re-foot_btn {
+  background: url(../img/foot.png) no-repeat;
+  background-size: cover;
+  width: 1.52rem;
+  height: 2.226667rem;
+  position: absolute;
+}
+.re-foot_btn:active {
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.re-foot_left {
+  left: 2.533333rem;
+  background-position: 0 0;
+}
+.re-foot_right {
+  right: 2.533333rem;
+  background-position: -1.52rem 0;
+}
+.re-step_1 .re-start {
+  display: block;
+}
+.re-step_2 .re-countdown {
+  display: block;
+}
+.re-step_3 .re-countdown {
+  display: block;
+  background-position: -4.626667rem 0;
+}
+.re-step_4 .re-countdown {
+  display: block;
+  background-position: -9.253333rem 0;
+}
+.re-step_5 .re-foot,
+.re-step_5 .re-energy {
+  display: block;
+}
