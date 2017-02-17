@@ -1,4 +1,8 @@
-# my-party-game
+# 年会现场活动
+## 目录说明
+- game-hammer(锤子游戏）
+- game-run-power（跑步收集能量）
+- game-run-score（跑步得分）
 ## 游戏剧本
 
 ### 一、2.23日下午**
