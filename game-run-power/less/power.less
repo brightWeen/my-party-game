@@ -1,0 +1,207 @@
+@import "functions";
+@import "common";
+.re-title {
+  position: absolute;
+  top: rem(80);
+  background: url(../img/title.png) no-repeat 0 0;
+  background-size: cover;
+  width: rem(533);
+  height: rem(46);
+  left: 50%;
+  margin-left: rem(-533/2);
+}
+.re-intro {
+  display: none;
+  position: absolute;
+  top: rem(180);
+  background: url(../img/intro.png) no-repeat 0 0;
+  background-size: cover;
+  width: rem(630);
+  height: rem(248);
+  left: 50%;
+  margin-left: rem(-630/2);
+}
+.re-countdown {
+  display: none;
+  position: absolute;
+  top: rem(160);
+  background: url(../img/countdown.png) no-repeat 0 0;
+  background-size: cover;
+  width: rem(347);
+  height: rem(348);
+  left: 50%;
+  margin-left: rem(-347/2);
+}
+.re-energy {
+  display: none;
+  width: rem(652);
+  height: rem(124);
+  background: url(../img/energy-bg.png) no-repeat;
+  background-size: cover;
+  top: rem(180);
+  position: absolute;
+  left: 50%;
+  margin-left: rem(-652/2);
+}
+.re-energy_back,
+.re-energy_fore {
+  position: absolute;
+  left: rem(27);
+  top: rem(12);
+  width: rem(598);
+  height: rem(100);
+  background: no-repeat 0 0;
+  background-size: contain;
+}
+.re-energy_back {
+  background-image: url(../img/energy-back.png);
+}
+.re-energy_fore {
+  z-index: 1;
+  background-image: url(../img/energy-fore.png);
+  background-position: rem(-600) 0;
+}
+.re-moon {
+  background: url(../img/moon.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: rem(774-130-220);
+  position: absolute;
+  bottom: 0;
+}
+.re-moon_1 {
+  background-position: center rem(-556);
+}
+.re-start {
+  display: none;
+  background: url(../img/btn-start.png) no-repeat top center;
+  background-size: cover;
+  width: rem(578);
+  height: rem(136);
+  position: absolute;
+  top: rem(413-220);
+  left: 50%;
+  margin-left: rem(-578/2);
+}
+.re-spaceman {
+  background: url(../img/spaceman.png) no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(-220);
+  width: rem(270);
+  height: rem(310);
+  overflow: hidden;
+}
+.re-spaceman_left {
+  background-position: rem(-270) 0;
+}
+.re-spaceman_right {
+  background-position: rem(-270*2) 0;
+}
+.re-foot {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: rem(480-130-220);
+  height: rem(167);
+}
+.re-foot_btn {
+  background: url(../img/foot.png) no-repeat;
+  background-size: cover;
+  width: rem(114);
+  height: rem(167);
+  position: absolute;
+  &:active {
+    margin-left: 3px;
+    margin-top: 3px;
+  }
+}
+.re-foot_left {
+  left: rem(190);
+  background-position: 0 0;
+}
+.re-foot_right {
+  right: rem(190);
+  background-position: rem(-114) 0;
+}
+.re-complete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  transition: top 500ms;
+}
+.re-complete_title {
+  background: url(../img/complete-title.png) no-repeat;
+  background-size: cover;
+  width: rem(449);
+  height: rem(129);
+  position: absolute;
+  top: rem(190);
+  left: 50%;
+  margin-left: rem(-449/2);
+}
+.re-complete_fireworks {
+  background: url(../img/fireworks.png) no-repeat;
+  background-size: cover;
+  width: rem(521);
+  height: rem(717);
+  margin-top: rem(30);
+  margin-left: auto;
+  margin-right: auto;
+}
+.re-complete_mask {
+  display: none;
+  background-color: rgba(0, 0, 0, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+}
+.re-submit {
+  background: url(../img/btn-submit.png) no-repeat top center;
+  background-size: cover;
+  width: rem(577);
+  height: rem(136);
+  position: absolute;
+  bottom: rem(200);
+  left: 50%;
+  margin-left: rem(-577/2);
+  &:focus,
+  &:active {
+    background-image: url(../img/btn-submit-active.png);
+  }
+}
+.re-step_1 {
+  .re-start,
+  .re-intro { display: block; }
+}
+.re-step_2 {
+  .re-countdown { display: block; }
+}
+.re-step_3 {
+  .re-countdown { display: block; background-position: rem(-347) 0; }
+}
+.re-step_4 {
+  .re-countdown { display: block; background-position: rem(-347*2) 0; }
+}
+//.re-step_6,
+.re-step_5 {
+  .re-foot,
+  .re-energy { display: block; }
+}
+.re-step_6 {
+  .re-complete {
+    top: 0;
+  }
+  .re-complete_mask {
+    display: block;
+  }
+}
