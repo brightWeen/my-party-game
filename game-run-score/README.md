@@ -3,7 +3,7 @@
 ## 初始化
 
 ```bash
-> npm i httpserver less
+> npm i
 ```
 
 ## 运行
@@ -16,5 +16,5 @@
 ## 开发
 
 ```bash
-> npm run less
+> npm run build
 ```
