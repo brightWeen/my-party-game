@@ -6,12 +6,15 @@
   "main": "index.js",
   "scripts": {
     "start": "httpserver -p 3005",
-    "less": "lessc less/run.less > css/run.css"
+    "prebuild": "lessc less/score.less > css/score.css",
+    "build": "postcss --use autoprefixer -o css/score.css css/score.css"
   },
   "author": "kuqoi",
   "license": "ISC",
-  "peerDependencies": {
+  "devDependencies": {
+    "autoprefixer": "^6.7.3",
     "httpserver": "^0.2.0",
-    "less": "^2.7.2"
+    "less": "^2.7.2",
+    "postcss-cli": "^3.0.0-beta"
   }
 }
