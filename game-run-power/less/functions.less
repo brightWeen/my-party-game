@@ -1,0 +1,13 @@
+@rem-function-hack: `(function() {
+    function rem(x) {
+      return Math.round(x / 75 * 1000000) / 1000000;
+    }
+
+    var less = process.mainModule.children.find(function (child) {
+        return child.exports.lesscHelper;
+    }).exports;
+
+    less.functions.functionRegistry.add("rem", function(x) {
+        return new less.tree.Dimension(rem(x.value), 'rem');
+    });
+})()`;
