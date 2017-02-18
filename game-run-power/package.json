@@ -7,7 +7,7 @@
   "scripts": {
     "start": "httpserver -p 3006",
     "prebuild": "lessc less/power.less > css/power.css",
-    "build": "postcss --use autoprefixer -o css/power.css css/power.css"
+    "build": "postcss --no-map --use autoprefixer -o css/power.css css/power.css"
   },
   "author": "kuqoi",
   "license": "ISC",

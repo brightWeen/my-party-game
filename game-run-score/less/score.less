@@ -1,11 +1,20 @@
 @import "functions";
 @import "common";
 @import "number";
-
+.re-title {
+  position: absolute;
+  top: rem(98);
+  background: url(../img/title.png) no-repeat 0 0;
+  background-size: cover;
+  width: rem(419);
+  height: rem(46);
+  left: 50%;
+  margin-left: rem(-419/2);
+}
 .re-countdown {
   display: none;
   position: absolute;
-  top: rem(100);
+  top: rem(160);
   background: url(../img/countdown.png) no-repeat 0 0;
   background-size: cover;
   width: rem(347);
@@ -13,23 +22,21 @@
   left: 50%;
   margin-left: rem(-347/2);
 }
-
 .re-energy {
   display: none;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  top: rem(180);
   width: rem(630);
+  left: 50%;
+  margin-left: rem(-630/2);
   height: rem(328);
   background: url(../img/energy-bg.png) no-repeat;
   background-size: contain;
-  position: relative;
-  color: #fff;
 }
-
 .re-energy_timing {
   position: absolute;
   left: rem(298);
-  top: rem(144);
+  top: rem(64);
   font-size: rem(26);
   .re-number {
     width: rem(17);
@@ -38,17 +45,15 @@
     margin-right: rem(2);
   }
 }
-
 .re-energy_mileage {
   position: absolute;
   left: rem(298);
-  top: rem(214);
+  top: rem(134);
   .re-number {
     margin-left: rem(3);
     margin-right: rem(3);
   }
 }
-
 .re-moon {
   background: url(../img/moon.png) no-repeat;
   background-size: cover;
@@ -115,6 +120,7 @@
 }
 .re-step_1 {
   .re-start { display: block; }
+  .re-title { top: rem(280); }
 }
 .re-step_2 {
   .re-countdown { display: block; }

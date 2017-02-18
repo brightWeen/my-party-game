@@ -7,7 +7,7 @@
   "scripts": {
     "start": "httpserver -p 3005",
     "prebuild": "lessc less/score.less > css/score.css",
-    "build": "postcss --use autoprefixer -o css/score.css css/score.css"
+    "build": "postcss --no-map --use autoprefixer -o css/score.css css/score.css"
   },
   "author": "kuqoi",
   "license": "ISC",
