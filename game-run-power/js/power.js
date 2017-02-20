@@ -1,6 +1,6 @@
 ;(function () {
     var step = 1
-    var energyFull = 4;
+    var energyFull = 100;
     var energy = 0;
     var $body = $('body')
     var $fore = $('#energy-fore')

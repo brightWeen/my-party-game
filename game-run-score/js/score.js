@@ -117,7 +117,7 @@
     var $this = $(this)
     var even = mileage % 2 === 0
     if (($this.hasClass('re-foot_left') && even) || ($this.hasClass('re-foot_right') && !even)) {
-      mileage++;
+      mileage+=5;
       reMileage();
 
       if (mileage % 5 === 0) {
