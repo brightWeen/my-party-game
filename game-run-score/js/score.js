@@ -7,7 +7,7 @@
   var $spaceman = $('#spaceman')
   var $moon = $('#moon')
   var moonRun = 0;
-  var timing = 20;
+  var timing = 60;
   var $timing = $('#energy-timing')
   var $score = $('#complete-score')
   runTiming(timing)
@@ -68,7 +68,7 @@
   }
 
   function renderTs(ts) {
-    var ms = padLeft(ts, 2)
+    var ms = padLeft(ts, timing.toString().length)
     var sp = []
     for (var i = 0; i < ms.length; i++) {
       var n = ms[i]
@@ -89,6 +89,7 @@
       // h = Math.floor(t / 60 / 60 % 24);
       // m = Math.floor(t / 60 % 60);
       s = Math.floor(t % 60);
+      s = t;
     }
     var p = []
     // p.push(renderTs(h))
@@ -102,6 +103,7 @@
   var ts = null;
 
   function startTiming() {
+    runTiming(timing)
     ts = setInterval(function () {
       timing--;
       runTiming(timing)
