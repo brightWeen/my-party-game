@@ -1,6 +1,9 @@
-@import "../less/functions";
+@import "less/functions";
 @import "common";
 @import "number";
+@import "less/run/foot";
+@import "less/run/spaceman";
+
 .re-title {
   .panel(100; 419; 46);
   display: none;
@@ -12,7 +15,7 @@
 .re-complete {
   .panel(180; 630; 248);
   display: none;
-  background: url(../img/panel.png) no-repeat 0 0;
+  background: url(../../img/run/panel.png) no-repeat 0 0;
   background-size: cover;
 }
 .re-intro_text {
@@ -23,7 +26,7 @@
 .re-countdown {
   .panel(100; 347; 348);
   display: none;
-  background: url(../img/countdown.png) no-repeat 0 0;
+  background: url(../../img/run/countdown.png) no-repeat 0 0;
   background-size: cover;
 }
 .re-energy_label-lastime {
@@ -86,7 +89,7 @@
   }
 }
 .re-moon {
-  background: url(../img/moon.png) no-repeat;
+  background: url(../../img/run/moon.png) no-repeat;
   background-size: cover;
   width: 100%;
   height: rem(774-130-220);
@@ -98,52 +101,11 @@
 }
 .re-start {
   display: none;
-  background: url(../img/btn-start.png) no-repeat top center;
+  background: url(../../img/run/btn-start.png) no-repeat top center;
   background-size: cover;
   .panel(413-220; 578; 136);
 }
-.re-spaceman {
-  background: url(../img/spaceman.png) no-repeat;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: rem(-220);
-  width: rem(270);
-  height: rem(310);
-  overflow: hidden;
-}
-.re-spaceman_left {
-  background-position: rem(-270) 0;
-}
-.re-spaceman_right {
-  background-position: rem(-270*2) 0;
-}
-.re-foot {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: rem(480-130-220);
-  height: rem(167);
-}
-.re-foot_btn {
-  background: url(../img/foot.png) no-repeat;
-  background-size: cover;
-  width: rem(114);
-  height: rem(167);
-  position: absolute;
-  &:active {
-    margin-left: 3px;
-    margin-top: 3px;
-  }
-}
-.re-foot_left {
-  left: rem(190);
-  background-position: 0 0;
-}
-.re-foot_right {
-  right: rem(190);
-  background-position: rem(-114) 0;
-}
+
 .re-step_1 {
   .re-intro,
   .re-title,

@@ -1,0 +1,24 @@
+{
+  "name": "game-run-score",
+  "version": "1.0.0",
+  "description": "game-run-score",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "httpserver -p 3005",
+    "prebuild-game-rank": "lessc game-rank/less/app.less > game-rank/css/app.css",
+    "build-game-rank": "postcss --no-map --use autoprefixer -o game-rank/css/app.css game-rank/css/app.css",
+    "prebuild-game-run-power": "lessc game-run-power/less/app.less > game-run-power/css/app.css",
+    "build-game-run-power": "postcss --no-map --use autoprefixer -o game-run-power/css/app.css game-run-power/css/app.css",
+    "prebuild-game-run-score": "lessc game-run-score/less/app.less > game-run-score/css/app.css",
+    "build-game-run-score": "postcss --no-map --use autoprefixer -o game-run-score/css/app.css game-run-score/css/app.css"
+  },
+  "author": "kuqoi",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.3",
+    "httpserver": "^0.2.0",
+    "less": "^2.7.2",
+    "postcss-cli": "^3.0.0-beta"
+  }
+}

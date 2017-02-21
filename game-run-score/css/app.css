@@ -96,6 +96,48 @@ body {
 .re-number_s {
   background-position: -4.666667rem 0;
 }
+.re-foot {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 1.733333rem;
+  height: 2.226667rem;
+}
+.re-foot_btn {
+  background: url(../../img/run/foot.png) no-repeat;
+  background-size: cover;
+  width: 1.52rem;
+  height: 2.226667rem;
+  position: absolute;
+}
+.re-foot_btn:active {
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.re-foot_left {
+  left: 2.533333rem;
+  background-position: 0 0;
+}
+.re-foot_right {
+  right: 2.533333rem;
+  background-position: -1.52rem 0;
+}
+.re-spaceman {
+  background: url(../../img/run/spaceman.png) no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.933333rem;
+  width: 3.6rem;
+  height: 4.133333rem;
+  overflow: hidden;
+}
+.re-spaceman_left {
+  background-position: -3.6rem 0;
+}
+.re-spaceman_right {
+  background-position: -7.2rem 0;
+}
 .re-title {
   position: absolute;
   top: 1.333333rem;
@@ -117,7 +159,7 @@ body {
   left: 50%;
   margin-left: -4.2rem;
   display: none;
-  background: url(../img/panel.png) no-repeat 0 0;
+  background: url(../../img/run/panel.png) no-repeat 0 0;
   background-size: cover;
 }
 .re-intro_text {
@@ -138,7 +180,7 @@ body {
   left: 50%;
   margin-left: -2.313333rem;
   display: none;
-  background: url(../img/countdown.png) no-repeat 0 0;
+  background: url(../../img/run/countdown.png) no-repeat 0 0;
   background-size: cover;
 }
 .re-energy_label-lastime {
@@ -224,7 +266,7 @@ body {
   margin-right: 0.04rem;
 }
 .re-moon {
-  background: url(../img/moon.png) no-repeat;
+  background: url(../../img/run/moon.png) no-repeat;
   background-size: cover;
   width: 100%;
   height: 5.653333rem;
@@ -236,7 +278,7 @@ body {
 }
 .re-start {
   display: none;
-  background: url(../img/btn-start.png) no-repeat top center;
+  background: url(../../img/run/btn-start.png) no-repeat top center;
   background-size: cover;
   position: absolute;
   top: 2.573333rem;
@@ -244,48 +286,6 @@ body {
   height: 1.813333rem;
   left: 50%;
   margin-left: -3.853333rem;
-}
-.re-spaceman {
-  background: url(../img/spaceman.png) no-repeat;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -2.933333rem;
-  width: 3.6rem;
-  height: 4.133333rem;
-  overflow: hidden;
-}
-.re-spaceman_left {
-  background-position: -3.6rem 0;
-}
-.re-spaceman_right {
-  background-position: -7.2rem 0;
-}
-.re-foot {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: 1.733333rem;
-  height: 2.226667rem;
-}
-.re-foot_btn {
-  background: url(../img/foot.png) no-repeat;
-  background-size: cover;
-  width: 1.52rem;
-  height: 2.226667rem;
-  position: absolute;
-}
-.re-foot_btn:active {
-  margin-left: 3px;
-  margin-top: 3px;
-}
-.re-foot_left {
-  left: 2.533333rem;
-  background-position: 0 0;
-}
-.re-foot_right {
-  right: 2.533333rem;
-  background-position: -1.52rem 0;
 }
 .re-step_1 .re-intro,
 .re-step_1 .re-title,

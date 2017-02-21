@@ -15,48 +15,90 @@ body {
   position: relative;
   padding-top: 1.333333rem;
 }
+.re-foot {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 1.733333rem;
+  height: 2.226667rem;
+}
+.re-foot_btn {
+  background: url(../../img/run/foot.png) no-repeat;
+  background-size: cover;
+  width: 1.52rem;
+  height: 2.226667rem;
+  position: absolute;
+}
+.re-foot_btn:active {
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.re-foot_left {
+  left: 2.533333rem;
+  background-position: 0 0;
+}
+.re-foot_right {
+  right: 2.533333rem;
+  background-position: -1.52rem 0;
+}
+.re-spaceman {
+  background: url(../../img/run/spaceman.png) no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2.933333rem;
+  width: 3.6rem;
+  height: 4.133333rem;
+  overflow: hidden;
+}
+.re-spaceman_left {
+  background-position: -3.6rem 0;
+}
+.re-spaceman_right {
+  background-position: -7.2rem 0;
+}
 .re-title {
   position: absolute;
   top: 1.066667rem;
-  background: url(../img/title.png) no-repeat 0 0;
-  background-size: cover;
   width: 7.106667rem;
   height: 0.613333rem;
   left: 50%;
   margin-left: -3.553333rem;
+  background: url(../img/title.png) no-repeat 0 0;
+  background-size: cover;
 }
 .re-intro {
-  display: none;
   position: absolute;
   top: 2.4rem;
-  background: url(../img/intro.png) no-repeat 0 0;
-  background-size: cover;
   width: 8.4rem;
   height: 3.306667rem;
   left: 50%;
   margin-left: -4.2rem;
+  display: none;
+  background: url(../img/intro.png) no-repeat 0 0;
+  background-size: cover;
 }
 .re-countdown {
-  display: none;
   position: absolute;
   top: 2.133333rem;
-  background: url(../img/countdown.png) no-repeat 0 0;
-  background-size: cover;
   width: 4.626667rem;
   height: 4.64rem;
   left: 50%;
   margin-left: -2.313333rem;
+  display: none;
+  background: url(../../img/run/countdown.png) no-repeat 0 0;
+  background-size: cover;
 }
 .re-energy {
-  display: none;
+  position: absolute;
+  top: 2.4rem;
   width: 8.693333rem;
   height: 1.653333rem;
-  background: url(../img/energy-bg.png) no-repeat;
-  background-size: cover;
-  top: 2.4rem;
-  position: absolute;
   left: 50%;
   margin-left: -4.346667rem;
+  display: none;
+  background: url(../img/energy-bg.png) no-repeat;
+  background-size: cover;
 }
 .re-energy_back,
 .re-energy_fore {
@@ -77,7 +119,7 @@ body {
   background-position: -8rem 0;
 }
 .re-moon {
-  background: url(../img/moon.png) no-repeat;
+  background: url(../../img/run/moon.png) no-repeat;
   background-size: cover;
   width: 100%;
   height: 5.653333rem;
@@ -88,22 +130,22 @@ body {
   background-position: center -7.413333rem;
 }
 .re-start {
-  display: none;
-  background: url(../img/btn-start.png) no-repeat top center;
-  background-size: cover;
-  width: 7.706667rem;
-  height: 1.813333rem;
   position: absolute;
   top: 2.573333rem;
+  width: 7.706667rem;
+  height: 1.813333rem;
   left: 50%;
   margin-left: -3.853333rem;
+  display: none;
+  background: url(../../img/run/btn-start.png) no-repeat top center;
+  background-size: cover;
 }
 .re-start:focus,
 .re-start:active {
-  background-image: url(../img/btn-start-active.png);
+  background-image: url(../../img/run/btn-start-active.png);
 }
 .re-spaceman {
-  background: url(../img/spaceman.png) no-repeat;
+  background: url(../../img/run/spaceman.png) no-repeat;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -117,32 +159,6 @@ body {
 }
 .re-spaceman_right {
   background-position: -7.2rem 0;
-}
-.re-foot {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: 1.733333rem;
-  height: 2.226667rem;
-}
-.re-foot_btn {
-  background: url(../img/foot.png) no-repeat;
-  background-size: cover;
-  width: 1.52rem;
-  height: 2.226667rem;
-  position: absolute;
-}
-.re-foot_btn:active {
-  margin-left: 3px;
-  margin-top: 3px;
-}
-.re-foot_left {
-  left: 2.533333rem;
-  background-position: 0 0;
-}
-.re-foot_right {
-  right: 2.533333rem;
-  background-position: -1.52rem 0;
 }
 .re-complete {
   position: absolute;
@@ -158,10 +174,10 @@ body {
 .re-complete_title {
   background: url(../img/complete-title.png) no-repeat;
   background-size: cover;
-  width: 5.986667rem;
-  height: 1.72rem;
   position: absolute;
   top: 2.533333rem;
+  width: 5.986667rem;
+  height: 1.72rem;
   left: 50%;
   margin-left: -2.993333rem;
 }
@@ -188,10 +204,10 @@ body {
 .re-submit {
   background: url(../img/btn-submit.png) no-repeat top center;
   background-size: cover;
+  position: absolute;
+  top: 2.666667rem;
   width: 7.693333rem;
   height: 1.813333rem;
-  position: absolute;
-  bottom: 2.666667rem;
   left: 50%;
   margin-left: -3.846667rem;
 }

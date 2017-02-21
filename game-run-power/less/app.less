@@ -1,55 +1,34 @@
-@import "../less/functions";
+@import "less/functions";
 @import "common";
+@import "less/run/foot";
+@import "less/run/spaceman";
+
 .re-title {
-  position: absolute;
-  top: rem(80);
+  .panel(80; 533; 46);
   background: url(../img/title.png) no-repeat 0 0;
   background-size: cover;
-  width: rem(533);
-  height: rem(46);
-  left: 50%;
-  margin-left: rem(-533/2);
 }
 .re-intro {
+  .panel(180; 630; 248);
   display: none;
-  position: absolute;
-  top: rem(180);
   background: url(../img/intro.png) no-repeat 0 0;
   background-size: cover;
-  width: rem(630);
-  height: rem(248);
-  left: 50%;
-  margin-left: rem(-630/2);
 }
 .re-countdown {
+  .panel(160; 347; 348);
   display: none;
-  position: absolute;
-  top: rem(160);
-  background: url(../img/countdown.png) no-repeat 0 0;
+  background: url(../../img/run/countdown.png) no-repeat 0 0;
   background-size: cover;
-  width: rem(347);
-  height: rem(348);
-  left: 50%;
-  margin-left: rem(-347/2);
 }
 .re-energy {
+  .panel(180; 652; 124);
   display: none;
-  width: rem(652);
-  height: rem(124);
   background: url(../img/energy-bg.png) no-repeat;
   background-size: cover;
-  top: rem(180);
-  position: absolute;
-  left: 50%;
-  margin-left: rem(-652/2);
 }
 .re-energy_back,
 .re-energy_fore {
-  position: absolute;
-  left: rem(27);
-  top: rem(12);
-  width: rem(598);
-  height: rem(100);
+  .absolute(27; 12; 598; 100);
   background: no-repeat 0 0;
   background-size: contain;
 }
@@ -62,7 +41,7 @@
   background-position: rem(-600) 0;
 }
 .re-moon {
-  background: url(../img/moon.png) no-repeat;
+  background: url(../../img/run/moon.png) no-repeat;
   background-size: cover;
   width: 100%;
   height: rem(774-130-220);
@@ -73,22 +52,17 @@
   background-position: center rem(-556);
 }
 .re-start {
+  .panel(413-220; 578; 136);
   display: none;
-  background: url(../img/btn-start.png) no-repeat top center;
+  background: url(../../img/run/btn-start.png) no-repeat top center;
   background-size: cover;
-  width: rem(578);
-  height: rem(136);
-  position: absolute;
-  top: rem(413-220);
-  left: 50%;
-  margin-left: rem(-578/2);
   &:focus,
   &:active {
-    background-image: url(../img/btn-start-active.png);
+    background-image: url(../../img/run/btn-start-active.png);
   }
 }
 .re-spaceman {
-  background: url(../img/spaceman.png) no-repeat;
+  background: url(../../img/run/spaceman.png) no-repeat;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -103,32 +77,7 @@
 .re-spaceman_right {
   background-position: rem(-270*2) 0;
 }
-.re-foot {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: rem(480-130-220);
-  height: rem(167);
-}
-.re-foot_btn {
-  background: url(../img/foot.png) no-repeat;
-  background-size: cover;
-  width: rem(114);
-  height: rem(167);
-  position: absolute;
-  &:active {
-    margin-left: 3px;
-    margin-top: 3px;
-  }
-}
-.re-foot_left {
-  left: rem(190);
-  background-position: 0 0;
-}
-.re-foot_right {
-  right: rem(190);
-  background-position: rem(-114) 0;
-}
+
 .re-complete {
   position: absolute;
   top: 100%;
@@ -142,12 +91,7 @@
 .re-complete_title {
   background: url(../img/complete-title.png) no-repeat;
   background-size: cover;
-  width: rem(449);
-  height: rem(129);
-  position: absolute;
-  top: rem(190);
-  left: 50%;
-  margin-left: rem(-449/2);
+  .panel(190; 449; 129);
 }
 .re-complete_fireworks {
   background: url(../img/fireworks.png) no-repeat;
@@ -172,12 +116,7 @@
 .re-submit {
   background: url(../img/btn-submit.png) no-repeat top center;
   background-size: cover;
-  width: rem(577);
-  height: rem(136);
-  position: absolute;
-  bottom: rem(200);
-  left: 50%;
-  margin-left: rem(-577/2);
+  .panel(200; 577; 136);
   &:focus,
   &:active {
     background-image: url(../img/btn-submit-active.png);
