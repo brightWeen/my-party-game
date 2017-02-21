@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>直击痛点</title>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<link rel="stylesheet" href="css/css.css">
+	<script src="../js/flexible.js"></script>
+	<script src="../js/jquery.min.js"></script>
+</head>
+<body class="bg2">
+<audio style="opacity: 0;position: absolute;left: -100rem;" preload="preload" id="music" loop="loop" src="/css/music.mp3">
+</audio>
+<script>
+	var audio = document.getElementById("music");
+	audio.preload = 'auto';
+	audio.play();
+
+	//    autoPlayMusic(audio);
+	backgroundMusic(audio);
+	// 音乐播放
+	function autoPlayMusic(audio, other) {
+		var o = 0;
+		if (other) {
+			for (o = 0; o < other.length; o++) {
+				other[o].pause();
+			}
+		}
+		if (window.WeixinJSBridge) {
+			WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+				if (audio.paused) {
+					audio.play();
+				}
+			});
+		} else {
+			audio.play();
+		}
+	}
+	///////////////////////
+
+	function backgroundMusic(audio) {
+		// 自动播放音乐效果，解决浏览器或者APP自动播放问题
+		if (audio.paused) {
+			audio.load();
+			audio.play();
+		}
+		function musicInBrowserHandler() {
+			if (audio.paused) {
+				audio.load();
+				audio.play();
+			}
+			document.body.removeEventListener('touchstart', musicInBrowserHandler);
+		}
+		document.body.addEventListener('touchstart', musicInBrowserHandler);
+
+		// 自动播放音乐效果，解决微信自动播放问题
+		function musicInWeixinHandler() {
+			if (audio.paused) {
+				audio.load();
+				audio.play();
+			}
+			document.addEventListener("WeixinJSBridgeReady", function () {
+				if (audio.paused) {
+					audio.load();
+					audio.play();
+				}
+			}, false);
+			document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+		}
+		document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+	}
+</script>
+<div class="bg loading">
+	<div class="tip1 hide"></div>
+	<div class="tip2 hide"></div>
+	<div class="login hide">
+		<div class="btn color" data-action="login">开始维修</div>
+	</div>
+</div>
+<div class="score color hide">
+	<div class="title">本次成绩</div>
+	<div class="fen">0</div>
+	<div class="chance">你还有5次机会</div>
+	<div class="za">
+		<div class="dingzibg">
+			<div class="cuizi"></div>
+			<div class="dingzi"></div>
+			<div class="good hide"></div>
+		</div>
+		<div id="go" class="btn color" data-action="begin">开始维修</div>
+	</div>
+</div>
+<div class="bg3 hide">
+	<div class="remark">
+		<div class="title">恭喜你完成本次挑战，综合成绩为：</div>
+		<div id="de_fen" class="content">0</div>
+	</div>
+</div>
+<script>
+
+  var u = navigator.userAgent;
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+  var myInterval = null;
+  var i = 60 * 7;
+  var x = 1 + (isiOS?1:0);
+  var max = 52 * 7;
+  var min = 40 * 7;
+  var middle = 46 * 7;
+  var UserData = {
+    clicks: 5,
+    arr_s: [],
+    fen: 0
+  };
+  var DingZi = {
+    login:function(){
+      $(".loading").animate({'margin-top':'-'+ $(".loading").css("height")},1000,function(){
+        $(".loading").hide();
+        $(".chance").text("你还有"+UserData.clicks+"次机会");
+        $(".fen").text(0);
+        $(".score").fadeIn(200,function(){
+        });
+      });
+    },
+    begin:function(e){
+      $(".good").hide();
+      $(".dingzi").css("bottom", "0");
+      $(".cuizi").css("top", "0.8rem");
+      UserData.clicks--;
+      if(UserData.clicks < 0) {
+        $(this).hide();
+        return;
+      };
+      $(".chance").text("你还有"+UserData.clicks+"次机会")
+
+      var isRight = true;
+      myInterval = setInterval(function(){
+        if(i<30 * 7){
+          isRight = false;
+        }
+        if(i>62 * 7){
+          isRight = true;
+        }
+        if(isRight){
+          i =i-x;
+        }else{
+          i =i+x;
+        }
+        $(".cuizi").css("margin-left", (i/70) + "rem");
+      },1);
+      $(e).text("点击砸钉子").data("action","down");
+    },
+    down:function(e){
+      if(UserData.clicks >= 0) {
+        clearInterval(myInterval);
+        $(".cuizi").css("top", "1.1rem");
+        var cur_s = 0;
+        if(i > min && i < max){
+          $(".good").show().fadeOut(200);
+          if(i > middle){
+            cur_s = 100 - (i-middle) * (80/(max-middle));
+            cur_s = Math.round(cur_s + Math.random());
+          }else if(i < middle){
+            cur_s = 100 - (middle-i) * (80/(max-middle));
+            cur_s = Math.round(cur_s + Math.random());
+          }else{
+            cur_s = 100;
+          }
+
+          $(".cuizi").css("top", (1.1+0.011*cur_s)+"rem");
+          $(".good").css("top", (4.4+0.011*cur_s)+"rem");
+          $(".dingzi").css("bottom", (0-0.011*cur_s)+"rem");
+        }
+        UserData.arr_s.push(cur_s);
+        $(".fen").text(cur_s);
+        if(UserData.clicks == 0){
+          $(".za").fadeOut(1000,function(){
+            $(".score").fadeOut(200);
+            $(".bg3").fadeIn(1000);
+          });
+          var zong_s = 0;
+          $(UserData.arr_s).each(function(){
+            zong_s = zong_s + this;
+          });
+          var cheng_ji = (zong_s/UserData.arr_s.length).toFixed(1);
+          DingZi.submit(cheng_ji);
+          $("#de_fen").text(cheng_ji);
+        }else{
+          $(e).text("再来一次").data("action","begin");
+        }
+        this.set();
+      }else {
+        $(".score").fadeOut(1000);
+        return;
+      };
+    },
+    set:function(){
+      localStorage.setItem("wsy",JSON.stringify(UserData));
+    },
+    get:function(){
+      var _data = localStorage.getItem("wsy");
+      if(_data)
+        UserData = JSON.parse(_data);
+      if(UserData.clicks <= 0) {
+        $(".score").hide();
+        $(".loading").hide();
+        $(".bg3").show();
+        $("#de_fen").text(UserData.fen);
+        return;
+      };
+    },
+    submit:function(fen){
+      //todo:发送到服务端
+      UserData.fen = fen;
+      var uid= "";
+      var uScore = fen;
+      //$ajax.post({})
+    }
+  };
+  DingZi.set();//todo: 正式发布时，去掉这个。重置的代码啊。
+  DingZi.get();
+  //入场动画
+  $(".tip1").fadeIn(1000,function(){
+    $(".tip2").fadeIn(1000,function(){
+      $(".login").fadeIn(1000);
+    });
+  });
+
+  //按钮事件
+  $(".btn").on("touchend",function(){
+    switch($(this).data("action")){
+      case "login":
+        DingZi.login();
+        break;
+      case "begin":
+        DingZi.begin(this);
+        break;
+      case "down":
+        DingZi.down(this);
+        break;
+    }
+  });
+</script>
+</body>
+</html>

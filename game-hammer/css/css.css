@@ -1,0 +1,186 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.bg{
+    background: url(bg_02.png) 0 0 no-repeat;
+    background-size: cover;
+    user-select:none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.bg2 {
+    background: url(bg.png) 0 0 no-repeat;
+    background-position: 0 -1rem;
+    background-size: cover;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+}
+.bg3 {
+    background: url(bg_03.png) 0 0 no-repeat;
+    background-position: 0 -1rem;
+    background-size: cover;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+.color{
+    color: #FFFFFF;
+}
+.hide{
+    display:none;
+}
+.tip1{
+    background: url(dialog_02.png) 0 0 no-repeat;
+    background-size: cover;
+    top: 2rem;
+    left: 0.3rem;
+    width: 8rem;
+    height: 0.96rem;
+    position: absolute;
+}
+.tip2{
+    background: url(dialog_01.png) 0 0 no-repeat;
+    background-size: cover;
+    top: 4rem;
+    left: 1rem;
+    width: 8rem;
+    height: 0.96rem;
+    position: absolute;
+}
+.login{
+    bottom: 6rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.login .uname{
+    background: url(uname.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 6rem;
+    height: 1.55rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.login .uname input{
+    text-align: center;
+    border: none;
+    line-height: 1.3rem;
+    height: 1.4rem;
+    background: none;
+    font-size: 0.5rem;
+    width: 5.2rem;
+    color: #ffffff;
+}
+.btn{
+    background: url(btn_01.gif) 0 0 no-repeat;
+    background-size: cover;
+    width: 6rem;
+    height: 1.55rem;
+    margin: 0 auto;
+    line-height: 1.55rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.score{
+    text-align: center;
+    margin-top: 3rem;
+}
+.score .title{
+    color: #fff;
+    font-size: 0.6rem;
+}
+.score .fen{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.score .chance{
+    margin-top: 0.65rem;
+    font-size: 0.5rem;
+}
+
+.za{
+    text-align: center;
+}
+.dingzibg{
+    height: 6rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+.cuizi{
+    background: url(cuizi.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 5.67rem;
+    height: 3.57rem;
+    margin-left:6rem;
+    position: absolute;
+    top: 0.8rem;
+}
+.dingzi{
+    background: url(dingzi.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 0.71rem;
+    height: 1.32rem;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.35rem;
+}
+.good{
+    background: url(good.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 2.24rem;
+    height: 0.66rem;
+    left: 50%;
+    top: 4.4rem;
+    position: absolute;
+    margin-left: -1.2rem;
+}
+.showFen{
+    top: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: none;
+    font-size: 2rem;
+    color: yellow;
+}
+
+.remark{
+    background: url(remark.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 7rem;
+    height: 5.6rem;
+    left: 50%;
+    top: 30%;
+    margin-left: -3.5rem;
+    color: #ffffff;
+    position: absolute;
+}
+.remark .title{
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.4rem;
+}
+.remark .content{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.5rem;
+}

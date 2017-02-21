@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "httpserver -p 3005",
+    "start": "httpserver -p 3007",
     "prebuild": "lessc less/app.less > css/app.css",
     "build": "postcss --no-map --use autoprefixer -o css/app.css css/app.css"
   },

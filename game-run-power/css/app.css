@@ -152,6 +152,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: 100;
+  -webkit-transition: top 500ms;
   transition: top 500ms;
 }
 .re-complete_title {
