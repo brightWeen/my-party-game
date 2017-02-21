@@ -1,0 +1,29 @@
+@rem-function-hack: `(function() {
+    function rem(x) {
+      return Math.round(x / 75 * 1000000) / 1000000;
+    }
+
+    var less = process.mainModule.children.find(function (child) {
+        return child.exports.lesscHelper;
+    }).exports;
+
+    less.functions.functionRegistry.add("rem", function(x) {
+        return new less.tree.Dimension(rem(x.value), 'rem');
+    });
+})()`;
+
+.panel(@top;@width;@height;) {
+  position: absolute;
+  top: rem(@top);
+  width: rem(@width);
+  height: rem(@height);
+  left: 50%;
+  margin-left: rem(-@width/2);
+}
+.absolute(@x;@y;@width;@height) {
+  position: absolute;
+  left: rem(@x);
+  top: rem(@y);
+  width: rem(@width);
+  height: rem(@height);
+}

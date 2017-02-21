@@ -1,0 +1,20 @@
+{
+  "name": "game-run-score",
+  "version": "1.0.0",
+  "description": "game-run-score",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "httpserver -p 3007",
+    "prebuild": "lessc less/app.less > css/app.css",
+    "build": "postcss --no-map --use autoprefixer -o css/app.css css/app.css"
+  },
+  "author": "kuqoi",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.3",
+    "httpserver": "^0.2.0",
+    "less": "^2.7.2",
+    "postcss-cli": "^3.0.0-beta"
+  }
+}
