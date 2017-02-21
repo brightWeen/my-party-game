@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "httpserver -p 3006",
-    "prebuild": "lessc less/power.less > css/power.css",
-    "build": "postcss --no-map --use autoprefixer -o css/power.css css/power.css"
+    "prebuild": "lessc less/app.less > css/app.css",
+    "build": "postcss --no-map --use autoprefixer -o css/app.css css/app.css"
   },
   "author": "kuqoi",
   "license": "ISC",

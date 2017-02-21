@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "httpserver -p 3005",
-    "prebuild": "lessc less/score.less > css/score.css",
-    "build": "postcss --no-map --use autoprefixer -o css/score.css css/score.css"
+    "prebuild": "lessc less/app.less > css/app.css",
+    "build": "postcss --no-map --use autoprefixer -o css/app.css css/app.css"
   },
   "author": "kuqoi",
   "license": "ISC",
