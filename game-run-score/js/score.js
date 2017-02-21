@@ -1,5 +1,4 @@
 ;(function () {
-
   var step = 1;
   var mileage = 0;
   var $body = $('body')
@@ -7,7 +6,7 @@
   var $spaceman = $('#spaceman')
   var $moon = $('#moon')
   var moonRun = 0;
-  var timing = 60;
+  var timing = 30;
   var $timing = $('#energy-timing')
   var $score = $('#complete-score')
   runTiming(timing)
