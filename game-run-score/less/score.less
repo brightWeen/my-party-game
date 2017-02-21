@@ -2,53 +2,84 @@
 @import "common";
 @import "number";
 .re-title {
-  position: absolute;
-  top: rem(98);
+  .panel(100; 419; 46);
+  display: none;
   background: url(../img/title.png) no-repeat 0 0;
   background-size: cover;
-  width: rem(419);
-  height: rem(46);
-  left: 50%;
-  margin-left: rem(-419/2);
+}
+.re-intro,
+.re-energy,
+.re-complete {
+  .panel(180; 630; 248);
+  display: none;
+  background: url(../img/panel.png) no-repeat 0 0;
+  background-size: cover;
+}
+.re-intro_text {
+  .panel(72; 324; 105);
+  background: url(../img/intro.png) no-repeat 0 0;
+  background-size: cover;
 }
 .re-countdown {
+  .panel(100; 347; 348);
   display: none;
-  position: absolute;
-  top: rem(160);
   background: url(../img/countdown.png) no-repeat 0 0;
   background-size: cover;
-  width: rem(347);
-  height: rem(348);
-  left: 50%;
-  margin-left: rem(-347/2);
 }
-.re-energy {
-  display: none;
-  position: absolute;
-  top: rem(180);
-  width: rem(630);
-  left: 50%;
-  margin-left: rem(-630/2);
-  height: rem(328);
-  background: url(../img/energy-bg.png) no-repeat;
-  background-size: contain;
+.re-energy_label-lastime {
+  .absolute(64; 64; 144; 28);
+  background: url(../img/energy-label-lastime.png) no-repeat;
+  background-size: cover;
+}
+.re-energy_label-score {
+  .absolute(376; 64; 144; 28);
+  background: url(../img/energy-label-score.png) no-repeat;
+  background-size: cover;
+}
+.re-energy_unit-lastime {
+  .absolute(157; 156; 36; 28);
+  background: url(../img/energy-unit-lastime.png) no-repeat;
+  background-size: cover;
+}
+.re-energy_unit-score {
+  .absolute(530; 156; 36; 28);
+  background: url(../img/energy-unit-score.png) no-repeat;
+  background-size: cover;
 }
 .re-energy_timing {
   position: absolute;
-  left: rem(298);
-  top: rem(64);
-  font-size: rem(26);
+  left: rem(73);
+  top: rem(132);
   .re-number {
-    width: rem(17);
-    height: rem(26);
-    margin-left: rem(2);
-    margin-right: rem(2);
+    //width: rem(17);
+    //height: rem(26);
+    margin-left: rem(3);
+    margin-right: rem(3);
   }
 }
 .re-energy_mileage {
   position: absolute;
-  left: rem(298);
-  top: rem(134);
+  left: rem(320);
+  top: rem(132);
+  .re-number {
+    margin-left: rem(3);
+    margin-right: rem(3);
+  }
+}
+.re-complete_title {
+  .panel(64; 504; 31);
+  background: url(../img/complete-title.png) no-repeat 0 0;
+  background-size: cover;
+}
+.re-complete_unit {
+  .absolute(397; 156; 36; 28);
+  background: url(../img/energy-unit-score.png) no-repeat;
+  background-size: cover;
+}
+.re-complete_score {
+  left: rem(188);
+  top: rem(136);
+  position: absolute;
   .re-number {
     margin-left: rem(3);
     margin-right: rem(3);
@@ -69,12 +100,7 @@
   display: none;
   background: url(../img/btn-start.png) no-repeat top center;
   background-size: cover;
-  width: rem(578);
-  height: rem(136);
-  position: absolute;
-  top: rem(413-220);
-  left: 50%;
-  margin-left: rem(-578/2);
+  .panel(413-220; 578; 136);
 }
 .re-spaceman {
   background: url(../img/spaceman.png) no-repeat;
@@ -119,8 +145,9 @@
   background-position: rem(-114) 0;
 }
 .re-step_1 {
+  .re-intro,
+  .re-title,
   .re-start { display: block; }
-  .re-title { top: rem(280); }
 }
 .re-step_2 {
   .re-countdown { display: block; }
@@ -132,6 +159,11 @@
   .re-countdown { display: block; background-position: rem(-347*2) 0; }
 }
 .re-step_5 {
+  .re-title,
   .re-foot,
   .re-energy { display: block; }
+}
+.re-step_6 {
+  .re-title,
+  .re-complete { display: block; }
 }

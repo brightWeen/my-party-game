@@ -3,12 +3,13 @@
   var step = 1;
   var mileage = 0;
   var $body = $('body')
-  var $mileage = $('.re-energy_mileage')
-  var $spaceman = $('.re-spaceman')
-  var $moon = $('.re-moon')
+  var $mileage = $('#energy-mileage')
+  var $spaceman = $('#spaceman')
+  var $moon = $('#moon')
   var moonRun = 0;
   var timing = 20;
-  var $timing = $('.re-energy_timing')
+  var $timing = $('#energy-timing')
+  var $score = $('#complete-score')
   runTiming(timing)
 
   ;(function preload() {
@@ -57,7 +58,7 @@
   }
 
   function renderMileage() {
-    var ms = padLeft(mileage, 6)
+    var ms = padLeft(mileage, 5)
     var sp = []
     for (var i = 0; i < ms.length; i++) {
       var n = ms[i]
@@ -71,9 +72,13 @@
     var sp = []
     for (var i = 0; i < ms.length; i++) {
       var n = ms[i]
-      sp.push('<span class="re-timing re-timing_' + n + '"></span>')
+      sp.push('<span class="re-number re-number_' + n + '"></span>')
     }
     return sp.join('')
+  }
+
+  function renderScore() {
+
   }
 
   function runTiming(t) {
@@ -81,15 +86,15 @@
     var m = 0;
     var s = 0;
     if (t >= 0) {
-      h = Math.floor(t / 60 / 60 % 24);
-      m = Math.floor(t / 60 % 60);
+      // h = Math.floor(t / 60 / 60 % 24);
+      // m = Math.floor(t / 60 % 60);
       s = Math.floor(t % 60);
     }
     var p = []
-    p.push(renderTs(h))
-    p.push('<span class="re-timing re-timing_s"></span>')
-    p.push(renderTs(m))
-    p.push('<span class="re-timing re-timing_s"></span>')
+    // p.push(renderTs(h))
+    // p.push('<span class="re-timing re-timing_s"></span>')
+    // p.push(renderTs(m))
+    // p.push('<span class="re-timing re-timing_s"></span>')
     p.push(renderTs(s))
     $timing.html(p.join(''))
   }
@@ -103,8 +108,8 @@
       if (timing === 0) {
         clearInterval(ts)
         addStep()
+        $score.html(renderMileage(mileage))
       }
-
     }, 1000)
   }
 
@@ -117,10 +122,10 @@
     var $this = $(this)
     var even = mileage % 2 === 0
     if (($this.hasClass('re-foot_left') && even) || ($this.hasClass('re-foot_right') && !even)) {
-      mileage+=5;
+      mileage += 5;
       reMileage();
 
-      if (mileage % 5 === 0) {
+      if (mileage % 10 === 0) {
         moonRun++;
       }
       $moon.toggleClass('re-moon_1', moonRun % 2 !== 0)

@@ -98,54 +98,128 @@ body {
 }
 .re-title {
   position: absolute;
-  top: 1.306667rem;
-  background: url(../img/title.png) no-repeat 0 0;
-  background-size: cover;
+  top: 1.333333rem;
   width: 5.586667rem;
   height: 0.613333rem;
   left: 50%;
   margin-left: -2.793333rem;
+  display: none;
+  background: url(../img/title.png) no-repeat 0 0;
+  background-size: cover;
+}
+.re-intro,
+.re-energy,
+.re-complete {
+  position: absolute;
+  top: 2.4rem;
+  width: 8.4rem;
+  height: 3.306667rem;
+  left: 50%;
+  margin-left: -4.2rem;
+  display: none;
+  background: url(../img/panel.png) no-repeat 0 0;
+  background-size: cover;
+}
+.re-intro_text {
+  position: absolute;
+  top: 0.96rem;
+  width: 4.32rem;
+  height: 1.4rem;
+  left: 50%;
+  margin-left: -2.16rem;
+  background: url(../img/intro.png) no-repeat 0 0;
+  background-size: cover;
 }
 .re-countdown {
-  display: none;
   position: absolute;
-  top: 2.133333rem;
-  background: url(../img/countdown.png) no-repeat 0 0;
-  background-size: cover;
+  top: 1.333333rem;
   width: 4.626667rem;
   height: 4.64rem;
   left: 50%;
   margin-left: -2.313333rem;
-}
-.re-energy {
   display: none;
+  background: url(../img/countdown.png) no-repeat 0 0;
+  background-size: cover;
+}
+.re-energy_label-lastime {
   position: absolute;
-  top: 2.4rem;
-  width: 8.4rem;
-  left: 50%;
-  margin-left: -4.2rem;
-  height: 4.373333rem;
-  background: url(../img/energy-bg.png) no-repeat;
-  background-size: contain;
+  left: 0.853333rem;
+  top: 0.853333rem;
+  width: 1.92rem;
+  height: 0.373333rem;
+  background: url(../img/energy-label-lastime.png) no-repeat;
+  background-size: cover;
+}
+.re-energy_label-score {
+  position: absolute;
+  left: 5.013333rem;
+  top: 0.853333rem;
+  width: 1.92rem;
+  height: 0.373333rem;
+  background: url(../img/energy-label-score.png) no-repeat;
+  background-size: cover;
+}
+.re-energy_unit-lastime {
+  position: absolute;
+  left: 2.093333rem;
+  top: 2.08rem;
+  width: 0.48rem;
+  height: 0.373333rem;
+  background: url(../img/energy-unit-lastime.png) no-repeat;
+  background-size: cover;
+}
+.re-energy_unit-score {
+  position: absolute;
+  left: 7.066667rem;
+  top: 2.08rem;
+  width: 0.48rem;
+  height: 0.373333rem;
+  background: url(../img/energy-unit-score.png) no-repeat;
+  background-size: cover;
 }
 .re-energy_timing {
   position: absolute;
-  left: 3.973333rem;
-  top: 0.853333rem;
-  font-size: 0.346667rem;
+  left: 0.973333rem;
+  top: 1.76rem;
 }
 .re-energy_timing .re-number {
-  width: 0.226667rem;
-  height: 0.346667rem;
-  margin-left: 0.026667rem;
-  margin-right: 0.026667rem;
+  margin-left: 0.04rem;
+  margin-right: 0.04rem;
 }
 .re-energy_mileage {
   position: absolute;
-  left: 3.973333rem;
-  top: 1.786667rem;
+  left: 4.266667rem;
+  top: 1.76rem;
 }
 .re-energy_mileage .re-number {
+  margin-left: 0.04rem;
+  margin-right: 0.04rem;
+}
+.re-complete_title {
+  position: absolute;
+  top: 0.853333rem;
+  width: 6.72rem;
+  height: 0.413333rem;
+  left: 50%;
+  margin-left: -3.36rem;
+  background: url(../img/complete-title.png) no-repeat 0 0;
+  background-size: cover;
+}
+.re-complete_unit {
+  position: absolute;
+  left: 5.293333rem;
+  top: 2.08rem;
+  width: 0.48rem;
+  height: 0.373333rem;
+  background: url(../img/energy-unit-score.png) no-repeat;
+  background-size: cover;
+}
+.re-complete_score {
+  left: 2.506667rem;
+  top: 1.813333rem;
+  position: absolute;
+}
+.re-complete_score .re-number {
   margin-left: 0.04rem;
   margin-right: 0.04rem;
 }
@@ -164,10 +238,10 @@ body {
   display: none;
   background: url(../img/btn-start.png) no-repeat top center;
   background-size: cover;
-  width: 7.706667rem;
-  height: 1.813333rem;
   position: absolute;
   top: 2.573333rem;
+  width: 7.706667rem;
+  height: 1.813333rem;
   left: 50%;
   margin-left: -3.853333rem;
 }
@@ -213,11 +287,10 @@ body {
   right: 2.533333rem;
   background-position: -1.52rem 0;
 }
+.re-step_1 .re-intro,
+.re-step_1 .re-title,
 .re-step_1 .re-start {
   display: block;
-}
-.re-step_1 .re-title {
-  top: 3.733333rem;
 }
 .re-step_2 .re-countdown {
   display: block;
@@ -230,7 +303,12 @@ body {
   display: block;
   background-position: -9.253333rem 0;
 }
+.re-step_5 .re-title,
 .re-step_5 .re-foot,
 .re-step_5 .re-energy {
+  display: block;
+}
+.re-step_6 .re-title,
+.re-step_6 .re-complete {
   display: block;
 }
