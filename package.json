@@ -2,7 +2,7 @@
   "name": "my-party-game",
   "version": "1.0.0",
   "description": "- game-hammer(锤子游戏） - game-run-power（跑步收集能量） - game-run-score（跑步得分）",
-  "main": "index.js",
+   "main": "server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev supervisor server",
     "build": "webpack --config webpackConfig/webpack.prod.config.js -p"
