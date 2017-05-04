@@ -14,8 +14,8 @@ AV.Cloud.useMasterKey();
 const app = require('./app/index');
 app.use(express.static('./public'));
 app.use(express.static('./'));
-const PORT = parseInt(process.env.LEANCLOUD_APP_PORT || 8080);
-
+//const PORT = parseInt(process.env.LEANCLOUD_APP_PORT || 8080);
+const PORT = parseInt(process.env.PORT || 5000);
 //启动服务器
 var isDev = process.env.NODE_ENV === 'dev';
 if(isDev){
